@@ -2,6 +2,9 @@ class Student{
 int rollno;
 String name;
 static String college="its";
+static void change(){
+college="mtiet";
+}
 Student(int r,String n){
 rollno=r;
 name=n;
@@ -12,7 +15,11 @@ class St{
 public static void main(String args[]){
 Student s1=new Student(1,"pr");
 Student s2=new Student(2,"re");
-Student.college="mtiet";
 s1.display();
 s2.display();
+Student.change();
+Student s3=new Student(3,"jaysad");
+s1.display();
+s2.display();
+s3.display();
 }}
