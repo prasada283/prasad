@@ -1,15 +1,30 @@
-class Operation{
-int square(int n){
-return n*n;
-}}
-class Circle{
-Operation op;
-double pi=3.14;
-double area(int radius){
-op=new Operation();
-int rsquare=op.square(radius);
-return pi*rsquare;}
+import java.util.Scanner;
+class ArraystoMethod{
+public int max(int[] array){
+int max=array[0];
+for(int i=0;i<array.length;i++)
+{
+if(array[i]>max){
+max=array[i];
+}
+}
+return max;
+}
+public int min(int[] array){
+int min=array[0];
+for(int i=0;i<array.length;i++){
+if(array[i]<min){min=array[i];}
+}
+return min;
+}
 public static void main(String args[]){
-Circle c=new Circle();
-double result=c.area(5);
-System.out.println(result);}}
+Scanner sc=new Scanner(System.in);
+System.out.println("entere the size of array");
+int size=sc.nextInt();
+int[] myarray=new int[size];
+System.out.println("enter elements:");
+for(int i=0;i<size;i++){
+myarray[i]=sc.nextInt();}
+ArraystoMethod  m =new ArraystoMethod();
+System.out.println("max val in array"+m.max(myarray));
+System.out.println("min val in array"+m.min(myarray));}}

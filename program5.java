@@ -1,28 +1,36 @@
-import  java.util.Scanner;
-class Trainer{
-private int tid;
-public void setTid(int tid){this.tid=tid;}
-public int getTid(){return this.tid;}
-public Trainer(int tid)
-{this.tid=tid;}
-public Trainer()
-{this.tid=0;}
+import java.util.Scanner;
+class Demo{
+public void displayMenu()
+{
+System.out.println("add+:");
+System.out.println("sub-:\n mul*:");
+System.out.println("div/");
+}
+public void add(int a,int b)
+{
+int res=a+b;
+System.out.println(a+"+"+b+"="+res);}
+public int sub(int a,int b)
+{
+int res=a-b;
+//System.out.println(a+"+"+b+"="+res);
+return res;
+}
+public int input()
+
+{
+Scanner sc=new Scanner(System.in);
+int temp=sc.nextInt();
+return temp;
 }
 class Test{
-
-public static void main(String args[]){
+public static void main(String arga[]){
+Demo ob=new Demo();
+ob.displayMenu();
 Scanner sc=new Scanner(System.in);
-Trainer[] ob=new Trainer[5];
-
-
-for(int i=0;i<5;i++){
-ob[i]=new Trainer();
-System.out.println("Enter ID for Trainer " + (i + 1) + ": ");
-ob[i].setTid(sc.nextInt());
-}
-System.out.println("Details are:\n");
-for(int j=0;j<5;j++){
-System.out.println("ID:"+ob[j].getTid());
-}
-}
-}
+int n1=sc.nextInt();
+int n2=sc.nextInt();
+ob.add(n1,n2);
+int r=ob.sub(n1,n2);
+System.out.println(n1+"-"+n2+"="+r);
+}}}
