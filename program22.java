@@ -1,28 +1,27 @@
-import java.util.Scanner;
-class ArmstrongNumberChecker {
-public static void main(String[] args) {
-Scanner scanner = new Scanner(System.in);
-System.out.print("Enter a number: ");
-int userInput = scanner.nextInt();
-if (isArmstrong(userInput)) {
-System.out.println(userInput + " is an Armstrong number.");
-} else {
-System.out.println(userInput + " is not an Armstrong number.");
+class Animal{
+void eat(){
+System.out.println("i can eat");
 }
 }
-static boolean isArmstrong(int number) {
-int originalNumber, remainder, result = 0, n = 0;
-originalNumber = number;
-while (originalNumber != 0) {
-originalNumber /= 10;
-++n;
+class Dog extends Animal{
+public void eat(){
+System.out.println("i eat dog food");
 }
-originalNumber = number;
-while (originalNumber != 0) {
-remainder = originalNumber % 10;
-result += Math.pow(remainder, n);
-originalNumber /= 10;
-}
-return result == number;
+
+//class Cat extends Animal
+public void bark(){
+System.out.println("i can bark");
 }
 }
+class Test{
+public static void main(String args[]){
+//Cat c=new Cat();
+Dog labrador=new Dog();
+labrador.eat();
+labrador.bark(); 
+/*c.meow();
+c.eat();
+Dog d=new Dog();
+d.bark();
+d.eat();*/
+}}

@@ -1,10 +1,10 @@
-class S2{
-void m(S2 obj){
-System.out.println("method is invoked");
+class Bike{
+final void run(){System.out.println("running");}
 }
-void p(){
-m(this);
-}
+class Honda extends Bike{
+void runsafe()
+{System.out.println("running safe in 100 kmph");}
 public static void main(String args[]){
-S2 ob=new S2();
-ob.p();}}
+Honda obh=new Honda();
+obh.run();
+}}

@@ -1,5 +1,13 @@
-class Bike1{
-Bike1(){System.out.println("bike is created");}
-public static void main(String args[]){
-Bike1 b=new Bike1();
+class Animal{
+Animal(){
+System.out.println("Animal is created");
 }}
+class Dog extends Animal{
+Dog(){ted");
+}}
+class TestSuper3{
+public static void main(String args[]){
+Dog d=new Dog();
+super();{
+System.out.println("dog is crea
+}}}

@@ -1,19 +1,20 @@
-class Student{
-int rollno;
+class Person{
+int id;
 String name;
-float fee;
-Student(int rollno,String name,float fee){
-this.rollno=rollno;
+Person(int id,String name){
+this.id=id;
 this.name=name;
-this.fee=fee;
+}}
+class Emp extends Person{
+float salary;
+Emp(int id,String name,float salary){
+super(id,name);
+this.salary=salary;
 }
 void display(){
-System.out.println(rollno+""+name+""+fee);}
+System.out.println(id+" "+name+" "+salary);}
 }
-class TestThis2{
-public static void main(String args[]){
-Student s1=new Student(111,"amit",5000f);
-Student s2=new Student(222,"arjun reddy",6000f);
-s1.display();
-s2.display();
-}}
+class TestSuper5{
+public static void main(System args[]){
+Emp e1=new Emp(1,"prasad",5400f);
+e1.display();}}
